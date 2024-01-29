@@ -34,7 +34,7 @@
         }
     }
 
-    public override void InputArray()
+    protected override void InputArray()
     {
         for (int i = 0; i < _array.Length; i++)
         {
@@ -50,7 +50,7 @@
             }
         }
     } 
-    public override void RandomArray()
+    protected override void RandomArray()
     {
         for (int i = 0; i < _array.Length; i++)
         {

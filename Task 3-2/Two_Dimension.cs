@@ -40,7 +40,7 @@ sealed class TwoDimension : ArrayBase
         }
     }
 
-    public override void InputArray()
+    protected override void InputArray()
     {
         for (int i = 0; i < _array.GetLength(0); i++)
         {
@@ -55,7 +55,7 @@ sealed class TwoDimension : ArrayBase
         Console.WriteLine();
     }
 
-    public override void RandomArray()
+    protected override void RandomArray()
     {
         for (int i = 0; i < _array.GetLength(0); i++)
         {

@@ -49,7 +49,7 @@ sealed class OneDimension:ArrayBase
         }
     }
 
-    public override void RandomArray()
+    protected override void RandomArray()
     {
         for (int i = 0; i < _array.Length; i++)
         {
@@ -57,8 +57,7 @@ sealed class OneDimension:ArrayBase
         }
     }
 
-
-    public override void InputArray()
+    protected override void InputArray()
     {
         Console.WriteLine("Enter a string with all values of an array separated by spaces");
         string input = Console.ReadLine();
