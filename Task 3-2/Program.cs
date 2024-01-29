@@ -17,29 +17,21 @@ class HelloWorld
         }
         if (typeArray == "one dimension")
         {
-            Console.WriteLine("Enter size of an array");
-            int size = int.Parse(Console.ReadLine());
-            OneDimension oneDimension = new OneDimension(size, userValues);
+            OneDimension oneDimension = new OneDimension(userValues);
             oneDimension.Average();
             oneDimension.DeleteOver();
             oneDimension.Unique();
         }
         if (typeArray == "two dimension")
         {
-            Console.WriteLine("Enter amount of lines of an array");
-            int lines = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter amount of columns of an array");
-            int columns = int.Parse(Console.ReadLine());
-            TwoDimension twoDimension = new TwoDimension(lines, columns, userValues);
+            TwoDimension twoDimension = new TwoDimension(userValues);
             //twoDimension.Average();
             twoDimension.Print();
             Console.WriteLine($"Matrix Determiner = {twoDimension.GetDeterminant()}");
         }
         if (typeArray == "many dimensions")
         {
-            Console.WriteLine("Enter amount of arrays in a big array");
-            int size = int.Parse(Console.ReadLine());
-            ManyDimension manyDimension = new ManyDimension(size, userValues);
+            ManyDimension manyDimension = new ManyDimension(userValues);
             //manyDimension.EvenNumChange();
             //manyDimension.Print();
             //manyDimension.Average_of_Single();

@@ -2,25 +2,27 @@
 {
     private Random _random = new Random();
     private int[][] _array;
-    public ManyDimension(int size, bool userValues = false)
+    public ManyDimension(bool userValues = false)
     {
-        Recreate(size, userValues);
+        Recreate(userValues);
     }
 
-    public void Recreate(int size, bool userValues = false)
+    public void Recreate(bool userValues = false)
     {
         if (userValues)
         {
-            CreateArray(size, true);
+            CreateArray(true);
         }
         else
         {
-            CreateArray(size);
+            CreateArray();
         }
     }
 
-    public override void CreateArray(int size, bool userValues = false)
+    public override void CreateArray(bool userValues = false)
     {
+        Console.WriteLine("Enter amount of arrays in a big array");
+        int size = int.Parse(Console.ReadLine());
         _array = new int[size][];
         if (!userValues)
         {

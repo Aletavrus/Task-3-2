@@ -6,25 +6,29 @@ sealed class TwoDimension : ArrayBase
 {
     private Random random = new Random();
     private int[,] _array;
-    public TwoDimension(int line, int column, bool userValues = false)
+    public TwoDimension(bool userValues = false)
     {
-        Recreate(line, column, userValues);
+        Recreate(userValues);
     }
 
-    public void Recreate(int line, int column, bool userValues = false)
+    public void Recreate(bool userValues = false)
     {
         if (userValues)
         {
-            CreateArray(line, column, true);
+            CreateArray(true);
         }
         else
         {
-            CreateArray(line, column);
+            CreateArray();
         }
     }
 
-    public override void CreateArray(int line, int column, bool userValues = false)
+    public override void CreateArray(bool userValues = false)
     {
+        Console.WriteLine("Enter amount of lines of an array");
+        int line = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter amount of columns of an array");
+        int column = int.Parse(Console.ReadLine());
         _array = new int[line, column];
         if (!userValues)
         {
