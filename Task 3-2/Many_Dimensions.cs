@@ -7,19 +7,12 @@
         Recreate(userValues);
     }
 
-    public void Recreate(bool userValues = false)
+    public override void Recreate(bool userValues = false)
     {
-        if (userValues)
-        {
-            CreateArray(true);
-        }
-        else
-        {
-            CreateArray();
-        }
+        CreateArray(userValues);
     }
 
-    public override void CreateArray(bool userValues = false)
+    protected override void CreateArray(bool userValues = false)
     {
         Console.WriteLine("Enter amount of arrays in a big array");
         int size = int.Parse(Console.ReadLine());

@@ -8,16 +8,9 @@ sealed class OneDimension:ArrayBase
         Recreate(userValues);
     }
 
-    public void Recreate(bool userValues = false)
+    public override void Recreate(bool userValues = false)
     {
-        if (userValues)
-        {
-            CreateArray(true);
-        }
-        else
-        {
-            CreateArray();
-        }
+        CreateArray(userValues);
     }
 
     public override void Print()
@@ -34,7 +27,7 @@ sealed class OneDimension:ArrayBase
         Console.WriteLine();
     }
 
-    public override void CreateArray(bool userValues = false)
+    protected override void CreateArray(bool userValues = false)
     {
         Console.WriteLine("Enter size of an array");
         int size = int.Parse(Console.ReadLine());

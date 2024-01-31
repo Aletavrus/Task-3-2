@@ -22,7 +22,7 @@ class HelloWorld
             arrayBase[i].Print();
             Console.WriteLine();
         }
-        arrayBase[1].CreateArray(userValues);
+        arrayBase[1].Recreate(userValues);
         arrayBase[1].Print();
     }
 }
