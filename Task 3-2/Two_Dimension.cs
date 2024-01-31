@@ -87,7 +87,6 @@ sealed class TwoDimension : ArrayBase
             }
             Console.WriteLine();
         }
-        Console.WriteLine();
         Console.WriteLine("And an array with reversed even lines");
         PrintEvenLines();
     }

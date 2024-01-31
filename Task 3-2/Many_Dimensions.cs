@@ -94,9 +94,10 @@
             decimal avg = summ / _array[i].Length;
             Console.WriteLine($"Average of values in {i} inner array = {avg}");
         }
+        AverageOfAll();
     }
 
-    public void AverageOfAll()
+    private void AverageOfAll()
     {
         int summ = 0;
         int totalLength = 0;
